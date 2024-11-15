@@ -1,0 +1,589 @@
+/*==================== Fonts ====================*/
+/*?== Montserrat Font ==*/
+@font-face {
+  font-family: Montserrat-VariableFont_wght;
+  src: url("../fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: Montserrat-Bold;
+  src: url("../fonts/Montserrat/static/Montserrat-Bold.ttf");
+}
+@font-face {
+  font-family: Montserrat-ExtraBold;
+  src: url("../fonts/Montserrat/static/Montserrat-ExtraBold.ttf");
+}
+@font-face {
+  font-family: Montserrat-ExtraLight;
+  src: url("../fonts/Montserrat/static/Montserrat-ExtraLight.ttf");
+}
+@font-face {
+  font-family: Montserrat-Medium;
+  src: url("../fonts/Montserrat/static/Montserrat-Medium.ttf");
+}
+@font-face {
+  font-family: Montserrat-Regular;
+  src: url("../fonts/Montserrat/static/Montserrat-Regular.ttf");
+}
+
+/*?== Poppins Font ==*/
+@font-face {
+  font-family: Poppins-Bold;
+  src: url("../fonts/Poppins/Poppins-Bold.ttf");
+}
+@font-face {
+  font-family: Poppins-Regular;
+  src: url("../fonts/Poppins/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: Poppins-SemiBold;
+  src: url("../fonts/Poppins/Poppins-SemiBold.ttf");
+}
+
+/*==================== Variables ====================*/
+:root {
+  --main-color: #343434;
+  --section-bg-color: #f7f7f7;
+  --about-section-black: #1c1c1c;
+}
+
+/*==================== General Styling ====================*/
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: Poppins-Regular;
+}
+
+.title {
+  font-family: Montserrat-ExtraBold;
+  color: var(--main-color);
+  font-size: 30px;
+  line-height: 33px;
+}
+
+.special-heading {
+  font-family: Montserrat-VariableFont_wght;
+  color: var(--main-color);
+  font-weight: 900;
+  line-height: 44px;
+  font-size: 40px;
+}
+
+.special-heading::before {
+  content: "";
+  position: absolute;
+  background-image: url("../imgs/dots.png");
+  width: 20%;
+  height: 30px;
+  bottom: -1px;
+  left: 29rem;
+  z-index: -1;
+}
+
+/*==================== Navbar Styles ====================*/
+.navbar {
+  padding: 25px 0 10px;
+}
+
+nav .navbar-brand {
+  font-family: Montserrat-ExtraBold;
+  color: #fff;
+}
+
+nav .navbar-nav li {
+  padding: 6px 10px;
+}
+
+nav .navbar-nav li a {
+  position: relative;
+  font-size: 14px;
+}
+
+nav .nav-link,
+nav .nav-link:focus,
+nav .nav-link:hover,
+nav .navbar-brand:hover {
+  color: #fff;
+}
+
+nav .navbar-nav .nav-link.active,
+nav .navbar-nav .nav-link.show {
+  color: #fff;
+  position: relative;
+}
+
+nav .navbar-nav li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  bottom: 0px;
+  left: 0px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+nav .navbar-nav li:hover a::after {
+  width: 100%;
+}
+
+nav .navbar-nav li .active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  bottom: 0px;
+  left: 0px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Navbar Scrolled */
+.navbar.scrolled {
+  padding: 6px 0 5px;
+}
+
+nav.scrolled {
+  background-color: #fff;
+  -webkit-box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.05);
+  -webkit-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+nav.scrolled .navbar-brand,
+nav.scrolled .navbar-toggler i,
+nav.scrolled .navbar-nav .nav-link {
+  color: #000;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+nav.scrolled .navbar-nav .nav-link::after {
+  background-color: #000;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+/*==================== Home Styles ====================*/
+.banner-section {
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.65)),
+      to(rgba(0, 0, 0, 0.66))
+    ),
+    url("../imgs/bg.jpg");
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.66)),
+    url("../imgs/bg.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.66)),
+    url("../imgs/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.banner-section h1 {
+  font-family: Montserrat-ExtraBold;
+  font-size: 50px;
+}
+
+.banner-section h2 {
+  font-family: Montserrat-ExtraLight;
+  font-size: 60px;
+}
+
+.banner-section h2 span {
+  font-family: Montserrat-Regular;
+}
+
+.banner-section .social-icons a {
+  width: 29px;
+  height: 29px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/*==================== About Styles ====================*/
+#about figure::after {
+  content: "";
+  position: absolute;
+  background-image: url("../imgs/dots.png");
+  width: 80%;
+  height: 80%;
+  left: -32px;
+  bottom: -35px;
+  z-index: -1;
+}
+
+#about .heading-title .sub-title {
+  line-height: 20px;
+  letter-spacing: 2px;
+  color: #999999;
+  font-size: 14px;
+}
+
+#about .progress {
+  background-color: #f7f7f7;
+  height: 26px;
+  -webkit-box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15) inset;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15) inset;
+}
+
+#about .progress .progress-bar {
+  background-color: var(--about-section-black);
+}
+
+#about .abt-btns button {
+  padding: 10px 30px;
+  border: 1px solid var(--about-section-black);
+  background-color: #fff;
+  font-size: 13px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#about .abt-btns button:nth-child(1) {
+  background-color: var(--about-section-black);
+  color: #fff;
+}
+
+#about .abt-btns button:nth-child(1):hover {
+  background-color: #fff;
+  color: var(--about-section-black);
+}
+
+#about .abt-btns button:nth-child(2):hover {
+  background-color: var(--about-section-black);
+  color: #fff;
+}
+
+/*==================== Services Styles ====================*/
+#services {
+  background-color: var(--section-bg-color);
+}
+
+#services .cards .card {
+  -webkit-box-shadow: 0px 10px 30px -8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 30px -8px rgba(0, 0, 0, 0.1);
+}
+
+#services .cards .card h6 {
+  font-family: Montserrat-ExtraBold;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+#services .cards .card .icon {
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  background-color: #f4f4f4;
+  -webkit-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+#services .cards .card:hover .icon {
+  background-color: var(--about-section-black);
+  color: #f4f4f4;
+}
+
+#services .cards .card p {
+  word-spacing: 2px;
+  font-size: 14px;
+}
+
+/*==================== Portofolio Styles ====================*/
+
+#work .nav-pills .nav-link {
+  background-color: transparent;
+  position: relative;
+  color: #000;
+  padding: 0;
+}
+
+#work .nav-pills .nav-item {
+  padding: 0 10px;
+}
+
+#work .nav-pills .nav-item:hover .nav-link::after {
+  width: 100%;
+  height: 2px;
+}
+
+#work .nav-pills .nav-link::after {
+  content: "";
+  position: absolute;
+  background-color: #000;
+  width: 0;
+  height: 2px;
+  bottom: 0px;
+  left: 0px;
+  -webkit-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+#work .nav-pills .active::after {
+  content: "";
+  position: absolute;
+  background-color: #000;
+  width: 100%;
+  height: 2px;
+  bottom: 0px;
+  left: 0px;
+  -webkit-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+#work .overlay-layer {
+  position: absolute;
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  top: 5px;
+  left: 5px;
+  bottom: 5px;
+  right: 5px;
+  -webkit-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+#work .box:hover .overlay-layer {
+  opacity: 1;
+}
+
+#work .box .overlay-layer .box-content h6 {
+  font-family: Montserrat-Bold;
+  font-size: 12px;
+  letter-spacing: 2px;
+  bottom: 10px;
+  -webkit-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+#work .box:hover .overlay-layer .box-content h6 {
+  bottom: 0;
+}
+
+#work .box .overlay-layer .box-content .hidden-icons {
+  top: 10px;
+  -webkit-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+#work .box:hover .overlay-layer .box-content .hidden-icons {
+  top: 0;
+}
+
+#work .box .overlay-layer .box-content .hidden-icons a {
+  color: #fff;
+  background-color: #000;
+  width: 30px;
+  height: 30px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+#work .box .overlay-layer .box-content .hidden-icons a:hover {
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #000;
+}
+
+/*==================== Testimonials Styles ====================*/
+#clients {
+  background-color: var(--section-bg-color);
+}
+
+#clients .carousel-indicators button {
+  background-color: #869791;
+  width: 10px;
+  height: 10px;
+}
+
+#clients .carousel-item figure {
+  width: 90px;
+  height: 90px;
+}
+
+#clients .carousel-item figcaption p {
+  color: #748182;
+  word-spacing: 2px;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+#clients .carousel-item figcaption h6 {
+  font-family: Montserrat-Bold;
+  color: #343434;
+}
+
+#clients .carousel-item figcaption span {
+  font-size: 12px;
+  line-height: 17px;
+}
+
+/*==================== Counter Styles ====================*/
+.counter-section .counter-info h3 {
+  font-family: Montserrat-ExtraBold;
+}
+
+.counter-section .counter-infp p {
+  font-size: 14px;
+}
+
+/*==================== Team Styles ====================*/
+#team {
+  background-color: var(--section-bg-color);
+}
+
+#team .team-card .team-txt {
+  background-color: #5b5b5b;
+}
+
+#team .team-card .team-txt h4,
+#team .team-card .team-txt h5 {
+  font-family: Montserrat-Regular;
+}
+
+#team .team-card .team-img .overlay-layer {
+  top: 5px;
+  left: 5px;
+  bottom: 5px;
+  right: 5px;
+  background-color: rgba(255, 255, 255, 0.95);
+  opacity: 0;
+  -webkit-transform: rotateY(180deg) scale(0.5, 0.5);
+  transform: rotateY(180deg) scale(0.5, 0.5);
+  -webkit-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+#team .team-card:hover .team-img .overlay-layer {
+  opacity: 1;
+  -webkit-transform: rotateY(0deg) scale(1, 1);
+  transform: rotateY(0deg) scale(1, 1);
+}
+
+#team .team-card .team-img img {
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+#team .team-card:hover .team-img img {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+#team .team-card .team-img .social-icons a {
+  color: #fff;
+  background-color: #000;
+  width: 25px;
+  height: 25px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  display: block;
+  border: 1px solid #000;
+}
+
+#team .team-card .team-img .social-icons a:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/*==================== Contact Us Styles ====================*/
+#contact .inner .icon {
+  background-color: #f4f4f4;
+  width: 60px;
+  height: 60px;
+  -webkit-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+#contact .inner:hover .icon {
+  background-color: var(--about-section-black);
+  color: #f4f4f4;
+}
+
+#contact .inner h6 {
+  font-family: Montserrat-Bold;
+}
+
+#contact .inner p {
+  font-size: 15px;
+}
+
+/*? form */
+#contact form .form-control {
+  background-color: #f4f4f4;
+  font-size: 14px;
+  color: #748182;
+  resize: both;
+}
+
+#contact form .form-control:focus {
+  -webkit-box-shadow: 0 0 0 0;
+  box-shadow: 0 0 0 0;
+}
+
+#contact form button {
+  background-color: var(--about-section-black);
+  color: #fff;
+  padding: 11px 37px;
+  font-size: 13px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  border: none;
+  border: 1px solid var(--about-section-black);
+  border-radius: 5px;
+}
+
+#contact form button:hover {
+  color: var(--about-section-black);
+  background-color: #fff;
+}
+
+/*==================== Footer Styles ====================*/
+footer {
+  background-color: var(--about-section-black);
+  color: #748182;
+  line-height: 20.8px;
+  font-size: 13px;
+}
